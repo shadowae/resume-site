@@ -1,49 +1,47 @@
 import React from 'react';
+import { Work } from '@material-ui/icons';
+import { isEmpty } from 'lodash';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import './Timeline.css';
 import 'react-vertical-timeline-component/style.min.css';
+import './Timeline.css';
 
-const Timeline = () => (
-  <div>
+// model
+import models from '../../model';
+/* eslint-disable*/
+
+const Timeline = props => (
+  <div className="timeline-container">
     <VerticalTimeline>
-      <VerticalTimelineElement
-        date="2011 - present"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      >
-        <h3>Creative Director</h3>
-        <h4>Miami, FL</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        date="2010 - 2011"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      >
-        <h3>Art Director</h3>
-        <h4>San Francisco, CA</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online
-          Marketing
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        date="2009 - 2010"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      >
-        <h3>Creative Director</h3>
-        <h4>Miami, FL</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
-        </p>
-      </VerticalTimelineElement>
+      {props.vtlElements.map((project, i) => (
+        <VerticalTimelineElement
+          date={project.date}
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<Work />}
+          iconOnClick={() => {
+            console.log('asdasdasd');
+          }}
+        >
+          <div className="vertical-timeline-element--work">
+            <h3>{project.title}</h3>
+            <h4>{project.place}</h4>
+            <p>{project.description}</p>
+            {!isEmpty(project.link) && (
+              <a href={project.link} target="_blank">
+                Click here to a project
+              </a>
+            )}
+          </div>
+        </VerticalTimelineElement>
+      ))}
     </VerticalTimeline>
   </div>
 );
+
+Timeline.propTypes = {
+  vtlElements: models.VerticalTimelineObject.isRequired,
+};
 
 export default Timeline;

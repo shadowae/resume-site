@@ -1,0 +1,8 @@
+.header-style {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+h1 > small {
+  /*color: #282c34;*/
+}

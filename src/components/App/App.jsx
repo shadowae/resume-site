@@ -1,53 +1,27 @@
 import React, { Component } from 'react';
-import { Col, Grid, Row } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import './App.css';
 import Header from '../Header';
 import Timeline from '../Timeline';
+import mocks from '../../mocks';
 
-// eslint-disable-next-line
+const { VerticalTimelineSample } = mocks;
+/* eslint-disable */
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar expand="true">
+          <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              Signed in as: <a href="#login">Mark Otto</a>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Navbar>
         <Header />
-        <Timeline />
-        <Grid>
-          <Row className="show-grid">
-            <Col xs={12} md={8}>
-              <code>{'<Col xs={12} md={8} />'}</code>
-            </Col>
-            <Col xs={6} md={4}>
-              <code>{'<Col xs={6} md={4} />'}</code>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={6} md={4}>
-              <code>{'<Col xs={6} md={4} />'}</code>
-            </Col>
-            <Col xs={6} md={4}>
-              <code>{'<Col xs={6} md={4} />'}</code>
-            </Col>
-            <Col xsHidden md={4}>
-              <code>{'<Col xsHidden md={4} />'}</code>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={6} xsOffset={6}>
-              <code>{'<Col xs={6} xsOffset={6} />'}</code>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col md={6} mdPush={6}>
-              <code>{'<Col md={6} mdPush={6} />'}</code>
-            </Col>
-            <Col md={6} mdPull={6}>
-              <code>{'<Col md={6} mdPull={6} />'}</code>
-            </Col>
-          </Row>
-        </Grid>
+        <Timeline vtlElements={VerticalTimelineSample} />
       </div>
     );
   }

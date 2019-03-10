@@ -1,13 +1,11 @@
 import React, { PureComponent } from 'react';
 import { Table as bootstrapTable } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { MovieObject } from '../../model';
 
-class Table extends PureComponent { // eslint-disable-line react/prefer-stateless-function
+class Table extends PureComponent {
+  // eslint-disable-line react/prefer-stateless-function
   getTTT = () => {
-    const {
-      movieData,
-    } = this.props;
+    const { movieData } = this.props;
     return movieData.forEach((movie, index) => (
       <tr>
         <td>{index}</td>
@@ -19,7 +17,7 @@ class Table extends PureComponent { // eslint-disable-line react/prefer-stateles
         <td>Table cell</td>
       </tr>
     ));
-  }
+  };
 
   render() {
     return (
@@ -36,9 +34,7 @@ class Table extends PureComponent { // eslint-disable-line react/prefer-stateles
               <th>Table heading</th>
             </tr>
           </thead>
-          <tbody>
-            { this.getTTT() }
-          </tbody>
+          <tbody>{this.getTTT()}</tbody>
         </bootstrapTable>
       </div>
     );

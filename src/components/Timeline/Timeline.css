@@ -1,3 +1,11 @@
 .vertical-timeline-element-content {
-    width: 45% !important;
+  width: 45% !important;
+}
+
+.vertical-timeline-element--work {
+  /*background: transparent;*/
+}
+
+.timeline-container {
+  padding: 50px 0px;
 }
