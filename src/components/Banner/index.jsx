@@ -10,9 +10,10 @@ class Banner extends Component {
             <h1>Story</h1>
             <p className="major">
               A (modular, highly tweakable) responsive one-page template
-              designed by <a href="https://html5up.net">HTML5 UP</a> and
-              released for free under the{' '}
-              <a href="https://html5up.net/license">Creative Commons</a>.
+              designed by
+              <a href="https://html5up.net"> HTML5 UP </a>
+              and released for free under the
+              <a href="https://html5up.net/license">Creative Commons</a>
             </p>
             <ul className="actions stacked">
               <li>

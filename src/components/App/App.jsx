@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Section from '../Section';
 import Banner from '../Banner';
+import GridDrisplay from '../GridDrisplay';
+import GridDisplayMockData from '../../mocks/GridDisplay';
 // import Header from '../Header';
 // import Timeline from '../Timeline';
 // import mocks from '../../mocks';
@@ -254,129 +256,7 @@ class App extends Component {
             </div>
           </section>
 
-          {/*Six*/}
-          <section class="wrapper style1 align-center">
-            <div class="inner">
-              <h2>Ipsum sed consequat</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                id ante sed ex pharetra lacinia sit amet vel massa. Donec
-                facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce
-                lorem lectus, pharetra pretium massa et, hendrerit vestibulum
-                odio lorem ipsum.
-              </p>
-              <div class="items style1 medium onscroll-fade-in">
-                <section>
-                  <span class="icon style2 major fa-gem" />
-                  <h3>Lorem</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-save" />
-                  <h3>Ipsum</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-chart-bar" />
-                  <h3>Dolor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-wifi" />
-                  <h3>Amet</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-cog" />
-                  <h3>Magna</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon style2 major fa-paper-plane" />
-                  <h3>Tempus</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-desktop" />
-                  <h3>Aliquam</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-sync-alt" />
-                  <h3>Elit</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-hashtag" />
-                  <h3>Morbi</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-bolt" />
-                  <h3>Turpis</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-envelope" />
-                  <h3>Ultrices</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-                <section>
-                  <span class="icon solid style2 major fa-leaf" />
-                  <h3>Risus</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi dui turpis, cursus eget orci amet aliquam congue
-                    semper. Etiam eget ultrices risus nec tempor elit.
-                  </p>
-                </section>
-              </div>
-            </div>
-          </section>
+          <GridDrisplay data={GridDisplayMockData} />
 
           {/*Seven*/}
           <section class="wrapper style1 align-center">
